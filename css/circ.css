@@ -1,0 +1,63 @@
+/* Please utilize the following conventions when developing css: https://github.com/mdo/code-guide#readme */
+
+/* Bootstrap overwrite */
+.modal-backdrop {
+  background-color: #ffffff;
+}
+
+/* Circ form */
+.circform-container {
+  margin-right: 15px;
+}
+.backdate {
+  display: none;
+  margin-left: 5px;
+  padding: 15px 0 0 10px;
+  border-left: 1px solid #ccc;
+}
+.circform-buttons {
+  margin-top: 25px;
+}
+
+/* Error alert */
+.alert {
+  display: none;
+}
+.alert-dialog .alert {
+  display: block;
+}
+.open-alert-dialog {
+  display: inline-block;
+}
+.alert-dialog .modal-header {
+  border-bottom: none;
+}
+.alert-dialog .alert-thumbnail {
+  margin-bottom: 10px;
+}
+.alert-dialog dl {
+  margin-top: 0;
+}
+
+/* Activity summary */
+.activity li {
+  margin-bottom: 15px;
+}
+.activity-thumbnail {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+}
+.activity-citation {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer */
+#footer {
+  margin-top: 50px;
+  border-top: 1px solid #e5e5e5;
+}
+#footer p {
+  padding-top: 5px;
+}

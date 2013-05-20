@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">						 
+  <head>
+	  <meta charset="utf-8">
+    <title>Check in</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  
+    <!-- Styles -->
+	  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      @media (max-width: 980px) {
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/circ.css"> 
+    
+    <!-- Fav/touch icons -->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/touch-icon-ipad-retina.png">		    
+  </head>
+  
+  <body>
+    
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Circa</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Check in</a></li>
+              <li><a href="#">Checkout</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  More
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Inventory control</a></li>
+                  <li><a href="#">Shelf list</a></li>
+                  <li><a href="#">Count internal use</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav pull-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                  <i class="icon-user icon-white"></i>
+                  Juno
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">My account</a></li>
+                  <li><a href="#">Sign out</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>	
+    
+    <div class="container">
+      <img src="img/logo.png">
+      <div class="row">	
+        
+        <!-- Check in form -->
+        <div class="circform-container well span6">
+          <form class="circform" id="checkin">
+            <h3>Check in</h3>
+            <div class="alert alert-error js-alert">
+              <a class="close js-close-alert" href="#">&times;</a>
+              Sierra is required to check in <strong>b1239082</strong>.
+              <a class="open-alert-dialog js-open-alert-dialog" href="#" >More details</a>
+            </div>
+            <label>Item barcode:</label>		
+            <input class="js-barcode" type="text" >
+            <label class="checkbox">
+              <input class="js-toggle-backdate" type="checkbox"> I'd like to backdate this item
+            </label>
+            <div class="js-backdate backdate">
+              <div class="input-append">
+                <input class="input-small" type="text" placeholder="mm/dd/yyyy">
+                <button class="btn" type="button"><i class="icon-calendar"></i></button>
+              </div>
+            </div>
+            <div class="circform-buttons">
+              <button class="btn" type="submit">Check in item</button>
+            </div>
+          </form>
+        </div>	
+        
+        <!-- Activity summary -->
+        <div class="activity span5">
+          <h4>Checked in items (3)</h4>			
+          <h5>Last item:</h5>
+          <ul>
+            <li>
+              <div class="activity-thumbnail hidden-phone"><img class="img-polaroid" src="img/windupbirdchronicle.jpg"></div>
+              <div class="activity-citation">
+                <div class="activity-barcode"><strong>b1276318</strong></div>
+                <div class="activity-title"><a href="#">The Wind-up Bird Chronicle</a></div>
+                <div class="activity-author hidden-phone">Haruki Murakami</div>
+                <div class="activity-materialtype hidden-phone"><i class="icon-book"></i> Book</div>
+              </div>
+            </li>
+          </ul>	
+          <h5>Previous items:</h5>
+          <ul>
+            <li>
+              <div class="activity-thumbnail hidden-phone"><img class="img-polaroid" src="img/norwegianwood.jpg"></div>
+              <div class="activity-citation">	
+                <div class="activity-barcode"><strong>b1275116</strong></div>
+                <div class="activity-title"><a href="#">Norwegian Wood</a></div>
+                <div class="activity-author hidden-phone">Haruki Murakami</div>
+                <div class="activity-materialtype hidden-phone"><i class="icon-book"></i> Book</div>
+              </div>		
+            </li>
+            <li>
+              <div class="activity-thumbnail hidden-phone"><img class="img-polaroid" src="img/cooked.jpg"></div>
+              <div class="activity-citation">
+                <div class="activity-barcode"><strong>b1276540</strong></div>
+                <div class="activity-title"><a href="#">Cooked</a></div>
+                <div class="activity-author hidden-phone">Michael Pollan</div>
+                <div class="activity-materialtype hidden-phone"><i class="icon-book"></i> Book</div>
+              </div>		
+            </li>
+          </ul>	
+        </div>			
+      </div>
+      
+      <!-- Footer -->
+      <footer id="footer">
+        <p>Woof. Meow. 2013</p>			
+      </footer>    
+    
+    </div>
+    
+    <!-- Alert details dialog -->
+    <div class="modal hide fade js-alert-dialog alert-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-header">
+        <button class="close js-close-alert-dialog" type="button" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-error">Sierra is required to check in <strong>b1239082</strong>.</div>
+        <div class="row">
+          <div class="span2"><img class="img-polaroid alert-thumbnail" src="img/grouchyladybug.jpg"></div>
+          <dl class="span3">
+            <dt>Barcode</dt>
+            <dd>b1239082</dd>
+            <dt>Title</dt>
+            <dd>The Grouchy Ladybug</dd>
+            <dt>Author</dt>
+            <dd>Eric Carle</dd>
+            <dt>Material type</dt>
+            <dd><i class="icon-book"></i> Book</dd>
+            <dt>Status</dt>
+            <dd>Due on 1/15/13 - Billed</dd>
+          </dl>					
+        </div>	
+      </div>
+    </div>
+    
+    <!-- Javascript -->
+    <script src="js/lib/jquery-1.9.1.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/circ.js"></script>
+  
+  </body>
+</html>
